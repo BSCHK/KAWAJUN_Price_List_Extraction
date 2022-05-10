@@ -1,0 +1,219 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1046,1774" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>NPOI.XSSF.UserModel</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>NPOI.OOXML</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="568,1709" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:Object)" Name="ResultList">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="scg:List(x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new List&lt;Object&gt;()</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="PdfPageCount" />
+      <Variable x:TypeArguments="x:Int32" Name="CurrentPageIndex">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="2" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="CurrencyList">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">new List&lt;string&gt;()</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="从PDF中获取价格单位" sap:VirtualizedContainerService.HintSize="526,649" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="PdfStr" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="读取 PDF 文本" FileName="C:\\Users\\weichan\\Documents\\Documents\\PDF提取项目\\KAWAJUN Price List 2020-2021.pdf" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_3" Range="2">
+        <ui:ReadPDFText.Text>
+          <OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">PdfStr</mca:CSharpReference>
+          </OutArgument>
+        </ui:ReadPDFText.Text>
+      </ui:ReadPDFText>
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="var CurrencyRegex = new Regex(@&quot;^[A-Z]{2}D$&quot;);&#xD;&#xA;&#xD;&#xA;foreach (var Arr in PdfStr.Split(new string[] { &quot;\r\n&quot; }, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x.Split(' ')))&#xD;&#xA;    if (Arr.All(x =&gt; CurrencyRegex.IsMatch(x)))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9; CurrencyList.AddRange(Arr.Distinct());&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="CurrencyList">
+            <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">CurrencyList</mca:CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="PdfStr">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">PdfStr</mca:CSharpValue>
+          </InArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <If DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Condition>
+          <InArgument x:TypeArguments="x:Boolean">
+            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">CurrencyList.Count == 0</mca:CSharpValue>
+          </InArgument>
+        </If.Condition>
+        <If.Then>
+          <Throw DisplayName="引发" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1">
+            <InArgument x:TypeArguments="s:Exception">
+              <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new Exception("无法在Pdf中获取价格单位")</mca:CSharpValue>
+            </InArgument>
+          </Throw>
+        </If.Then>
+        <If.Else>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <upap:GetPDFPageCount DisplayName="获取 PDF 页数" FileName="C:\\Users\\weichan\\Documents\\Documents\\PDF提取项目\\KAWAJUN Price List 2020-2021.pdf" sap:VirtualizedContainerService.HintSize="526,59" sap2010:WorkflowViewState.IdRef="GetPDFPageCount_1">
+      <upap:GetPDFPageCount.PageCount>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">PdfPageCount</mca:CSharpReference>
+        </OutArgument>
+      </upap:GetPDFPageCount.PageCount>
+    </upap:GetPDFPageCount>
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="先条件循环" sap:VirtualizedContainerService.HintSize="526,625" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="376,456" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="PdfStr" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="读取 PDF 文本" FileName="C:\\Users\\weichan\\Documents\\Documents\\PDF提取项目\\KAWAJUN Price List 2020-2021.pdf" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_2">
+            <ui:ReadPDFText.Range>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">CurrentPageIndex.ToString()</mca:CSharpValue>
+              </InArgument>
+            </ui:ReadPDFText.Range>
+            <ui:ReadPDFText.Text>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">PdfStr</mca:CSharpReference>
+              </OutArgument>
+            </ui:ReadPDFText.Text>
+          </ui:ReadPDFText>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="var NumberRegex = new Regex(@&quot;^[0-9,]+$&quot;);&#xA;&#xA;&#xA;KeyValuePair&lt;string, List&lt;int&gt;&gt; Entity = default;&#xA;foreach (var Arr in PdfStr.Split(new string[] { &quot;\r\n&quot; }, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x.Split(' ')))&#xA;{&#xA; &#xA;&#xA;    for (int i = 0; i &lt; Arr.Length; i++)&#xA;    {&#xA;&#x9;&#x9; if (Arr.Length == 1)&#xA;            break;&#xA;&#x9;&#x9;&#xA;        if (NumberRegex.IsMatch(Arr[i]))&#xA;            if (i + 1 == Arr.Length || !NumberRegex.IsMatch(Arr[i + 1]))&#xA;            {&#xA;&#xA;                Entity.Value.Add(int.Parse(Arr[i].Replace(&quot;,&quot;, &quot;&quot;)));&#xA;                ResultList.Add(Entity);&#xA;                Entity = default;&#xA;                continue;&#xA;            }&#xA;&#xA;        if (i + 1 &lt; Arr.Length &amp;&amp; !NumberRegex.IsMatch(Arr[i]) &amp;&amp; !NumberRegex.IsMatch(Arr[i + 1]))&#xA;            continue;&#xA;&#xA;&#xA;        if (!NumberRegex.IsMatch(Arr[i]))&#xA;        {&#xA;            Entity = new KeyValuePair&lt;string, List&lt;int&gt;&gt;(Arr[i], new List&lt;int&gt;());&#xA;            continue;&#xA;        }&#xA;&#xA;        Entity.Value.Add(int.Parse(Arr[i].Replace(&quot;,&quot;, &quot;&quot;)));&#xA;    }&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="PdfStr">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">PdfStr</mca:CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="scg:List(x:Object)" x:Key="ResultList">
+                <mca:CSharpValue x:TypeArguments="scg:List(x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">ResultList</mca:CSharpValue>
+              </InArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">CurrentPageIndex</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">CurrentPageIndex + 1</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">CurrentPageIndex &lt;= PdfPageCount -1</mca:CSharpValue>
+      </ui:InterruptibleWhile.Condition>
+    </ui:InterruptibleWhile>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="var OutputPath = @&quot;.\Output.xlsx&quot;;&#xD;&#xA;&#xD;&#xA;if(File.Exists(OutputPath))&#xD;&#xA;    File.Delete(OutputPath);&#xD;&#xA;&#xD;&#xA; var Workbook = new XSSFWorkbook();&#xD;&#xA;&#xD;&#xA;var Sheet = Workbook.CreateSheet(&quot;Output&quot;);&#xD;&#xA;var RowIndex = 0;&#xD;&#xA;&#xD;&#xA;var CurrencyRow = Sheet.CreateRow(RowIndex++);&#xD;&#xA;var CurrencyColIndex = 0;&#xD;&#xA; CurrencyRow.CreateCell(CurrencyColIndex++).SetCellValue(&quot;Id&quot;);&#xD;&#xA;&#xD;&#xA;foreach(var Currency in CurrencyList)&#xD;&#xA;&#x9;CurrencyRow.CreateCell(CurrencyColIndex++).SetCellValue(Currency);&#xD;&#xA;&#xD;&#xA;foreach(var OriginEntity in ResultList)&#xD;&#xA;{&#xD;&#xA;    var Entity1 = (KeyValuePair&lt;string, List&lt;int&gt;&gt;)OriginEntity;&#xD;&#xA;    var ColIndex = 0;&#xD;&#xA;    var Row = Sheet.CreateRow(RowIndex++);&#xD;&#xA;    Row.CreateCell(ColIndex++).SetCellValue(Entity1.Key);&#xD;&#xA;    &#xD;&#xA;    foreach(var Price in Entity1.Value)&#xD;&#xA;        Row.CreateCell(ColIndex++).SetCellValue(Price);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;using (var FileStream = File.Open(OutputPath, FileMode.CreateNew))&#xD;&#xA;    Workbook.Write(FileStream);" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="526,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="scg:List(x:Object)" x:Key="ResultList">
+          <mca:CSharpValue x:TypeArguments="scg:List(x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">ResultList</mca:CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="CurrencyList">
+          <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">CurrencyList</mca:CSharpValue>
+        </InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>
