@@ -9062,15 +9062,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\weichan\\.nuget\\packages\\": {}
+    "C:\\Users\\weichan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "KAWAJUN_Price_List_Extraction",
       "projectName": "KAWAJUN_Price_List_Extraction",
-      "projectPath": "C:\\Users\\weichan\\Documents\\Project\\GitRepository\\UiPath\\KAWAJUN_Price_List_Extraction\\KAWAJUN_Price_List_Extraction\\.local",
+      "projectPath": "C:\\Users\\weichan\\Documents\\UiPath\\UiPath_KAWAJUN_Price_List_Extraction\\KAWAJUN_Price_List_Extraction\\.local",
       "packagesPath": "C:\\Users\\weichan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\weichan\\Documents\\Project\\GitRepository\\UiPath\\KAWAJUN_Price_List_Extraction\\KAWAJUN_Price_List_Extraction\\.local"
+      "outputPath": "C:\\Users\\weichan\\Documents\\UiPath\\UiPath_KAWAJUN_Price_List_Extraction\\KAWAJUN_Price_List_Extraction\\.local",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ]
     },
     "frameworks": {
       "net461": {
